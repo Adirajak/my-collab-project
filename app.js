@@ -4,7 +4,7 @@ const destinations = [
     title: "Santorini, Greece",
     img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
     desc: "Experience the iconic blue domes, stunning sunsets, and Mediterranean charm of Santorini.",
-    link: "#"
+    link: "https://images.app.goo.gl/jSjgRUK6ytdDew9X8"
   },
   {
     title: "Kyoto, Japan",

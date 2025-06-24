@@ -1,3 +1,7 @@
+.title{
+  font: Arial;
+  text-color: #0d6efd;
+}
 :root {
   --primary: #0d6efd;
   --accent: #594410;

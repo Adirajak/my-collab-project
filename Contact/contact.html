@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Explore World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/Contact/contact.css"/>
+  <link rel="icon" href="images/logo.png" type="image/x-icon"/>
+</head>
+<body>
+  <nav>
+    <div class="logo">Explore World</div>
+    <ul>
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="destination.html">Destinations</a></li>
+      <li class="nav-item"><a class="nav-link" href="bhopal.html">Bhopal</a></li>
+      <li class="nav-item"><a class="nav-link" href="indore.html">Indore</a></li>
+      <li class="nav-item"><a class="nav-link active" href="/Contact/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="contact-hero" style="background-image: url('images/contact-bg.jpg');">
+    <div class="hero-content">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you! Reach out for travel inquiries, feedback, or just to say hello.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:info@exploreworld.com">info@exploreworld.com</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+911234567890">+91 12345 67890</a></li>
+          <li><strong>Address:</strong> 123, Main Street, Bhopal, MP, India</li>
+        </ul>
+        <div class="social-links">
+          <a href="#" title="Instagram"><img src="images/instagram.svg" alt="Instagram"></a>
+          <a href="#" title="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
+          <a href="#" title="Twitter"><img src="images/twitter.svg" alt="Twitter"></a>
+        </div>
+      </div>
+      <form class="contact-form" autocomplete="off">
+        <h2>Send a Message</h2>
+        <div class="input-group">
+          <input type="text" name="name" required placeholder="Your Name">
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" required placeholder="Your Email">
+        </div>
+        <div class="input-group">
+          <textarea name="message" required placeholder="Your Message" rows="5"></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+        <div class="form-message" style="display:none;">Thank you for contacting us!</div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 ExploreWorld. All rights reserved.
+  </footer>
+  <script>
+    // Simple form handler for demo
+    document.querySelector('.contact-form').onsubmit = function(e) {
+      e.preventDefault();
+      this.querySelector('.form-message').style.display = 'block';
+      this.reset();
+    }
+  </script>
+</body>
+</html>

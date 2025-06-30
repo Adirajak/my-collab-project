@@ -268,3 +268,9 @@ img {
   height: auto;
   display: block;
 }
+
+.map {
+  text-decoration: none;
+  color: #2980b9;
+  font-weight: 600;
+}

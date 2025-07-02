@@ -3,170 +3,282 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Explore World</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;400&display=swap" rel="stylesheet"/>
+  <title>Explore World | Discover Your Next Adventure</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+  <!-- For icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-  <nav>
-    <div class="logo">Explore World</div>
-    <ul>
-      <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="destination.html">Destinations</a></li>
-      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="/Contact/contact.html">Contact</a></li>   
-    </ul>
+  <!-- Navbar -->
+  <nav class="navbar glassmorphic" aria-label="Main navigation">
+    <div class="container nav-container">
+      <div class="logo" aria-label="Explore World Home">
+        <a href="index.html"><i class="fa-solid fa-earth-asia"></i> <span>Explore</span> World</a>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a class="nav-link active" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="destination.html">Destinations</a></li>
+        <li><a class="nav-link" href="#experiences">Experiences</a></li>
+        <li><a class="nav-link" href="footer">About</a></li>
+        <li><a class="nav-link" href="/Contact/contact.html">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <section class="hero">
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Discover Your Next Adventure</h1>
-      <p>Explore the world’s most beautiful places, curated for every traveler. Start your journey now!</p>
-      <button onclick="window.location='#destinations'">Explore Destinations</button>
+      <h1>
+        Discover Your Next <span class="gradient-text">Adventure</span>
+      </h1>
+      <p>
+        Explore the world’s most beautiful places, curated for every traveler. Start your journey now!
+      </p>
+      <form class="search-bar" action="search.html" method="get" aria-label="Search destinations">
+        <input type="text" name="q" placeholder="Search destinations, experiences..." aria-label="Search">
+        <button type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+      </form>
+      <a href="#destinations" class="cta-btn">Explore Destinations</a>
     </div>
-  </section>
+  </header>
 
+  <!-- Destinations Section -->
   <section class="section" id="destinations">
-    <div class="section-title">Top Destinations</div>
+    <h2 class="section-title">🌟 Top Destinations</h2>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="heritage">Heritage</button>
+      <button class="filter-btn" data-filter="food">Food</button>
+      <button class="filter-btn" data-filter="nature">Nature</button>
+      <button class="filter-btn" data-filter="urban">Urban</button>
+    </div>
     <div class="cards">
-
-      <div class="card">
+      <div class="card" data-category="heritage nature">
         <img src="images/bhopal.jpg" alt="Bhopal">
         <div class="card-body">
-          <h3 class="card-title">Bhopal</h3>
-          <p class="card-text">The City of Lakes and rich heritage.</p>
-          <div class="card-action">
-            <a href="bhopal.html">Explore Bhopal</a>
-          </div>
+          <h3>Bhopal</h3>
+          <p>The City of Lakes and rich heritage.</p>
+          <a href="bhopal.html" class="card-action">Explore Bhopal</a>
         </div>
       </div>
-
-      <div class="card">
+      <div class="card" data-category="heritage food urban">
         <img src="images/indore.jpg" alt="Indore">
         <div class="card-body">
-          <h3 class="card-title">Indore</h3>
-          <p class="card-text">Food capital with heritage landmarks.</p>
-          <div class="card-action">
-            <a href="indore.html">Explore Indore</a>
-          </div>
+          <h3>Indore</h3>
+          <p>Food capital with heritage landmarks.</p>
+          <a href="indore.html" class="card-action">Explore Indore</a>
         </div>
       </div>
-
-      <div class="card">
+      <div class="card" data-category="heritage urban">
         <img src="images/jaipur.jpg" alt="Jaipur">
         <div class="card-body">
-          <h3 class="card-title">Jaipur</h3>
-          <p class="card-text">The Pink City of Rajasthan.</p>
-          <br>
-          <div class="card-action">
-            <a href="jaipur.html">Explore Jaipur</a>
-          </div>
+          <h3>Jaipur</h3>
+          <p>The Pink City of Rajasthan.</p>
+          <a href="jaipur.html" class="card-action">Explore Jaipur</a>
         </div>
       </div>
-
-      <div class="card">
+      <div class="card" data-category="nature">
         <img src="images/jabalpur.jpg" alt="Jabalpur">
         <div class="card-body">
-          <h3 class="card-title">Jabalpur</h3>
-          <p class="card-text">Land of marble rocks and waterfalls.</p>
-          <div class="card-action">
-            <a href="jabalpur.html">Explore Jabalpur</a>
-          </div>
+          <h3>Jabalpur</h3>
+          <p>Land of marble rocks and waterfalls.</p>
+          <a href="jabalpur.html" class="card-action">Explore Jabalpur</a>
         </div>
       </div>
-
-      <div class="card">
+      <div class="card" data-category="heritage">
         <img src="images/agra.jpg" alt="Agra">
         <div class="card-body">
-          <h3 class="card-title">Agra</h3>
-          <p class="card-text">Home of the Taj Mahal.</p><br>
-          <div class="card-action">
-            <a href="agra.html">Explore Agra</a>
-          </div>
+          <h3>Agra</h3>
+          <p>Home of the Taj Mahal.</p>
+          <a href="agra.html" class="card-action">Explore Agra</a>
         </div>
       </div>
-
-      <div class="card">
+      <div class="card" data-category="urban heritage">
         <img src="images/delhi.jpg" alt="Delhi">
         <div class="card-body">
-          <h3 class="card-title">Delhi</h3>
-          <p class="card-text">Historic capital with modern flair.</p>
-          <div class="card-action">
-            <a href="delhi.html">Explore Delhi</a>
-          </div>
+          <h3>Delhi</h3>
+          <p>Historic capital with modern flair.</p>
+          <a href="delhi.html" class="card-action">Explore Delhi</a>
         </div>
       </div>
-
-      <div class="card">
-      <img src="images/mumbai.jpg" alt="Mumbai">
-      <div class="card-body">
-        <h3 class="card-title">Mumbai</h3>
-        <p class="card-text">City of Dreams with Bollywood glamour.</p>
-        <div class="card-action">
-          <a href="mumbai.html">Explore Mumbai</a>
+      <div class="card" data-category="urban food">
+        <img src="images/mumbai.jpg" alt="Mumbai">
+        <div class="card-body">
+          <h3>Mumbai</h3>
+          <p>City of Dreams with Bollywood glamour.</p>
+          <a href="mumbai.html" class="card-action">Explore Mumbai</a>
         </div>
       </div>
-    </div>
-
-    <div class="card">
-  <img src="images/kolkata.jpg" alt="Kolkata">
-  <div class="card-body">
-    <h3 class="card-title">Kolkata</h3>
-    <p class="card-text">City of Joy with colonial charm.</p><br>
-    <div class="card-action">
-      <a href="ekolkata.html">Explore Kolkata</a>
-    </div>
-  </div>
-</div>
-
-    <div class="card">
-  <img src="images/chennai.jpg" alt="Chennai">
-  <div class="card-body">
-    <h3 class="card-title">Chennai</h3>
-    <p class="card-text">Gateway to South India.</p><br>
-    <div class="card-action">
-      <a href="chennai.html">Explore Chennai</a>
-    </div>
-  </div>
-</div>
-
-        <div class="card">
-  <img src="images/hyderabad.jpg" alt="Hyderabad">
-  <div class="card-body">
-    <h3 class="card-title">Hyderabad</h3>
-    <p class="card-text">Blend of modernity and heritage.</p>
-    <div class="card-action">
-      <a href="hyderabad.html">Explore Hyderabad</a>
-    </div>
-  </div>
-</div>
-
-
+      <div class="card" data-category="heritage urban">
+        <img src="images/kolkata.jpg" alt="Kolkata">
+        <div class="card-body">
+          <h3>Kolkata</h3>
+          <p>City of Joy with colonial charm.</p>
+          <a href="kolkata.html" class="card-action">Explore Kolkata</a>
+        </div>
+      </div>
+      <div class="card" data-category="urban">
+        <img src="images/chennai.jpg" alt="Chennai">
+        <div class="card-body">
+          <h3>Chennai</h3>
+          <p>Gateway to South India.</p>
+          <a href="chennai.html" class="card-action">Explore Chennai</a>
+        </div>
+      </div>
+      <div class="card" data-category="urban heritage food">
+        <img src="images/hyderabad.jpg" alt="Hyderabad">
+        <div class="card-body">
+          <h3>Hyderabad</h3>
+          <p>Blend of modernity and heritage.</p>
+          <a href="hyderabad.html" class="card-action">Explore Hyderabad</a>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- Featured Experiences -->
+  <section class="section" id="experiences">
+    <h2 class="section-title">✨ Featured Experiences</h2>
+    <div class="experiences-grid">
+      <div class="experience-card">
+        <img src="images/food-tour.jpg" alt="Food Tour">
+        <h4>Street Food Tours</h4>
+        <p>Taste the best of local cuisine with expert guides.</p>
+      </div>
+      <div class="experience-card">
+        <img src="images/heritage-walk.jpg" alt="Heritage Walk">
+        <h4>Heritage Walks</h4>
+        <p>Discover the stories behind iconic landmarks.</p>
+      </div>
+      <div class="experience-card">
+        <img src="images/trekking.jpg" alt="Trekking">
+        <h4>Trekking Adventures</h4>
+        <p>Explore scenic trails and breathtaking views.</p>
+      </div>
+      <div class="experience-card">
+        <img src="images/nightlife.jpg" alt="Nightlife">
+        <h4>Vibrant Nightlife</h4>
+        <p>Experience the city after dark with local experts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter-section">
+    <div class="newsletter-content">
+      <h2>Stay Inspired!</h2>
+      <p>Subscribe for travel tips, exclusive deals, and destination inspiration.</p>
+      <form class="newsletter-form" aria-label="Newsletter Signup">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Subscribe <i class="fa fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- About Section -->
   <section class="section" id="about">
-    <div class="section-title">About Us</div>
-    <p style="max-width: 700px; margin: 0 auto; text-align: center;">
-      ExploreWorld is your trusted travel companion, dedicated to helping you discover, plan, and book unforgettable journeys. Our team curates the best destinations, experiences, and travel tips so you can focus on making memories.
+    <h2 class="section-title">About Us</h2>
+    <p class="about-text">
+      <strong>ExploreWorld</strong> is your trusted travel companion, dedicated to helping you discover, plan, and book unforgettable journeys. Our passionate team curates the best destinations, experiences, and travel tips, so you can focus on making memories. Whether you're a solo explorer or traveling with family, we're here to inspire your next adventure!
     </p>
   </section>
 
+  <!-- Contact Section -->
   <section class="section" id="contact">
-    <div class="section-title">Contact Us</div>
-    <form style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
-      <input type="text" placeholder="Your Name" required style="padding: 0.7rem; border-radius: 8px; border: 1px solid #ccc;">
-      <input type="email" placeholder="Your Email" required style="padding: 0.7rem; border-radius: 8px; border: 1px solid #ccc;">
-      <textarea placeholder="Message" rows="4" required style="padding: 0.7rem; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-      <button type="submit" style="background: var(--primary); color: var(--white); border: none; padding: 0.7rem 0; border-radius: 8px; font-weight: 600; cursor: pointer;">Send Message</button>
+    <h2 class="section-title">Contact Us</h2>
+    <form class="contact-form" aria-label="Contact Us">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <footer class="footer">
-    &copy; 2025 ExploreWorld. All rights reserved.
+  <!-- Footer -->
+  <footer class="footer glassmorphic">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>About ExploreWorld</h3>
+        <p>Empowering travelers to explore the globe with curated guides, tips, and inspiration. Your journey, our passion.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: <a href="mailto:info@exploreworld.com">info@exploreworld.com</a></li>
+          <li>Phone: <a href="tel:+911234567890">+91 7974383961</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/kashishsinghjaiswal/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 ExploreWorld. All rights reserved.
+    </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="app.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', navMenu.classList.contains('open'));
+    });
+
+    // Filter destinations
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category.includes(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Newsletter form (demo)
+    document.querySelector('.newsletter-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you for subscribing!');
+      e.target.reset();
+    });
+
+    // Contact form (demo)
+    document.querySelector('.contact-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Message sent! We will get back to you soon.');
+      e.target.reset();
+    });
+  </script>
 </body>
 </html>
